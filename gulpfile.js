@@ -1,65 +1,45 @@
-const { src, dest, parallel, watch, series } = require("gulp");
-const concat = require("gulp-concat");
-const sass = require("gulp-sass")(require("sass"));
-const pug = require("gulp-pug");
-const browserSync = require("browser-sync").create();
+const { src, dest, parallel, watch, series } = require("gulp"),
+  concat = require("gulp-concat"),
+  scss = require("gulp-sass")(require("sass")),
+  pug = require("gulp-pug"),
+  browserSync = require("browser-sync").create();
 
-// Files Path
 const FilesPath = {
-  sassFiles: "src/sass/*.sass",
+  scssFiles: "src/sass/*.scss",
   pugFiles: "src/pug/pages/*.pug",
+  assetsFile: "assets/**/*",
 };
 
-const { sassFiles, pugFiles } = FilesPath;
+const { scssFiles, pugFiles, assetsFile } = FilesPath;
 
-// Sass task
-function sassTask() {
-  return src(sassFiles)
-    .pipe(sass({ outputStyle: "compressed" }))
+function scssTask() {
+  return src(scssFiles)
+    .pipe(scss())
     .pipe(concat("style.css"))
-    .pipe(dest("assets/css"))
+    .pipe(dest("./dist/css"))
     .pipe(browserSync.stream());
 }
 
-/** Pug Task */
 function pugTask() {
   return src(pugFiles)
     .pipe(pug({ pretty: true }))
-    .pipe(dest("./"))
+    .pipe(dest("./dist"))
     .pipe(browserSync.stream());
 }
 
-/** Watch Task */
+function assetsTask() {
+  return src(assetsFile).pipe(dest("./dist/assets"));
+}
 
 function serve() {
-  browserSync.init({
-    server: {
-      baseDir: "./",
-    },
-    port: 3000,
-  });
-
-  watch(sassFiles, sassTask);
-  watch(pugFiles, pugTask);
+  browserSync.init({ server: { baseDir: "./dist" } });
+  watch(scssFiles, scssTask);
+  watch("src/pug/**/*.pug", pugTask);
+  watch(assetsFile, assetsTask);
 }
 
-/* Browser-sync
- * ------------ */
-function brsSync(done) {
-  browserSync.init({
-    server: {
-      baseDir: options.browserSync.baseDir,
-    },
-    port: 3000,
-  });
-  done();
-}
-
-// function clean() {
-//   return del(["assets"]);
-// }
-exports.sass = sassTask;
+exports.scss = scssTask;
 exports.pug = pugTask;
-// exports.clean = clean;
-exports.default = series(parallel(pugTask, sassTask));
-exports.serve = series(serve, parallel(pugTask, sassTask));
+exports.assets = assetsTask;
+exports.default = series(parallel(pugTask, scssTask, assetsTask));
+exports.serve = series(serve, parallel(pugTask, scssTask, assetsTask));
