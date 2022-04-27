@@ -1,16 +1,17 @@
 body {
   font-family: $roboto;
   line-height: 1;
+  background-color: $gray-light;
 }
 
-.container {}
 
 .bg-gray {
   background-color: $bg-gray;
 }
 
+
 .color-gray {
-  color: $gray;
+  color: $gray-light;
 }
 
 a:link,

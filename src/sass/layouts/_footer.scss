@@ -1,0 +1,25 @@
+.footer__container {
+  background-color: $gray-light;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto;
+
+  &__cooperation {
+    height:150px;
+
+    .title {
+      font-size:bold;
+      text-transform:uppercase;
+      line-height: 1;
+    }
+
+    img {
+      height:100%;
+      width: auto;
+    }
+  }
+}

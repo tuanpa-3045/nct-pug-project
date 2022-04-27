@@ -1,0 +1,37 @@
+-
+  var listLinkNavbar = [
+    {
+      title: "Bài hát",
+    },
+    {
+      title: "Playlist"
+    },
+    {
+      title: "Tuyển tập"
+    },
+    {
+      title: "Video"
+    },
+    {
+      title: "BXH"
+    },
+    {
+      title: "Chủ Đề"
+    }
+  ]
+
+mixin header()
+  header
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container
+        a.navbar-brand(href='#')
+          img(src=".assets/images/logo_nct.png", alt="logo")
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavDropdown.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link.text-primary(href='#') &num;phienbanmoi
+            each item in listLinkNavbar
+              li.nav-item
+                a.nav-link(aria-current='page' href='#')= item.title
