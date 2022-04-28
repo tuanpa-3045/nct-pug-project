@@ -1,4 +1,4 @@
-.footer__container {
+.footer {
   background-color: $gray-light;
   margin: 0 auto;
   max-width: 100%;
@@ -7,9 +7,9 @@
   padding-left: var(--bs-gutter-x, .75rem);
   margin-right: auto;
   margin-left: auto;
+  padding-top:1000px;
 
   &__cooperation {
-    height:150px;
 
     .title {
       font-size:bold;

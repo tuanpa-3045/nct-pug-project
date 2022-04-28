@@ -1,6 +1,43 @@
-header {
+.header {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 20px;
+  position: fixed;
+  top:0;
+  z-index: $z-index1;
+
+  &__search {
+    margin: 0 30px;
+    position: relative;
+
+    .icon {
+      opacity: 0.8;
+      position: absolute;
+      top: 11px;
+      left: 5px;
+      outline: none;
+    }
+
+    input {
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+  }
+
+
+  &__upgrade-icon {
+    width: 28px;
+    margin-left: 15px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .btn {
+    font-size: $f-size13;
+  }
 }

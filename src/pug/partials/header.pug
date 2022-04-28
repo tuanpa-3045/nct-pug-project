@@ -1,37 +1,26 @@
--
-  var listLinkNavbar = [
-    {
-      title: "Bài hát",
-    },
-    {
-      title: "Playlist"
-    },
-    {
-      title: "Tuyển tập"
-    },
-    {
-      title: "Video"
-    },
-    {
-      title: "BXH"
-    },
-    {
-      title: "Chủ Đề"
-    }
-  ]
-
-mixin header()
-  header
+mixin header(listLinkNavbar)
+  header.header
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       .container
         a.navbar-brand(href='#')
-          img(src=".assets/images/logo_nct.png", alt="logo")
+          img(src="./assets/images/logo_nct.png", alt="logo")
         button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarNavDropdown.collapse.navbar-collapse
           ul.navbar-nav
-            li.nav-item
-              a.nav-link.text-primary(href='#') &num;phienbanmoi
             each item in listLinkNavbar
               li.nav-item
-                a.nav-link(aria-current='page' href='#')= item.title
+                if (item.title === "phienbanmoi")
+                  a.nav-link.text-primary(href='#') &num;phienbanmoi
+                else
+                  a.nav-link(aria-current='page' href='#!')= item.title
+        .header__search
+          i.icon.fa-solid.fa-magnifying-glass
+          input(type='text' placeholder='Tìm kiếm')
+        .header__upgrade-icon
+          img(src="./assets/images/nav-header/ic_store.png", alt="icon")
+        .header__upgrade-icon
+          img(src="./assets/images/nav-header/ic_upload.png", alt="icon")
+        button.btn.btn-light.mx-1(type='button') Đăng nhập
+        button.btn.btn-primary(type='button')  Đăng Ký
+
