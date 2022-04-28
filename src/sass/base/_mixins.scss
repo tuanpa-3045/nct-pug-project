@@ -1,0 +1,19 @@
+@mixin title() {
+  text-transform: uppercase;
+  font-size: $f-size27;
+  font-weight: $fw100;
+  color: $blue;
+}
+
+@mixin flex($flex-direction: row,
+  $align-items: center,
+  $justify-content: center,
+  $wrap: wrap,
+  $gap: 0) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
