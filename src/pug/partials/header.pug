@@ -10,9 +10,9 @@ mixin header(listLinkNavbar)
           ul.navbar-nav
             each item in listLinkNavbar
               li.nav-item
-                if (item.title === "phienbanmoi")
+                - if (item.title === "phienbanmoi")
                   a.nav-link.text-primary(href='#') &num;phienbanmoi
-                else
+                - else
                   a.nav-link(aria-current='page' href='#!')= item.title
         .header__search
           i.icon.fa-solid.fa-magnifying-glass

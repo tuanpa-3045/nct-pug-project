@@ -1,8 +1,10 @@
+
 @mixin title() {
   text-transform: uppercase;
   font-size: $f-size27;
-  font-weight: $fw100;
+  font-weight: $fw300;
   color: $blue;
+  margin-bottom: 10px;
 }
 
 @mixin flex($flex-direction: row,
@@ -17,3 +19,46 @@
   flex-wrap: $wrap;
   gap: $gap;
 }
+
+@mixin button($border-radius : 0) {
+  width: 33%;
+  margin: 0 -3px;
+  padding: 10px 20px;
+  border: none;
+  background-color: $p-gray;
+}
+
+@mixin index() {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@mixin nameSinger() {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: rgba($p-gray, 0.6);
+  padding-top: 5px;
+}
+
+@mixin hoverTransition($color, $backgroundColor: '') {
+
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: $color;
+
+    @if $backgroundColor !='' {
+      background-color: $backgroundColor;
+    }
+    cursor: pointer;
+    box-shadow: 0.1em 0.1em 1em rgba($white, 0.3);
+  }
+}
+
+@mixin description {
+    color: rgba($p-gray, 0.6);
+    font-size: small;
+    margin-top:0.5rem;
+  }

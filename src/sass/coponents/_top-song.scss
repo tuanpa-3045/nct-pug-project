@@ -1,0 +1,55 @@
+.box-right {
+  width: 30%;
+  margin: 60px auto;
+  text-align: center;
+
+  &-title {
+    @include title()
+  }
+
+  &-nav-item {
+    width: 33%;
+  }
+
+  .nation {
+    @include button();
+  }
+  .active {
+    background-color: rgba($red, 0.5);;
+    color: $white;
+  }
+
+  .list-chart-music {
+    min-height: 5rem;
+    border-bottom: 1px solid rgba($p-gray, 0.1);
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    position: relative;
+
+    .first-img {
+      height: 8rem;
+
+      .special-0 {
+        position: absolute;
+        bottom: 1rem;
+      }
+
+      img {
+        height:100%;
+      }
+    }
+
+    .index {
+      @include index()
+    }
+
+    &-description {
+      @include description()
+    }
+
+    &-singer {
+      @include nameSinger()
+    }
+  }
+
+}

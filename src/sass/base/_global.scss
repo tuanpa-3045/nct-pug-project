@@ -21,6 +21,20 @@ body {
   color: $gray-light;
 }
 
+.ml-3 {
+  margin-left: 1rem !important;
+}
+.pr-3 {
+  padding-right: 1rem !important;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $blue !important;
+}
+
 a:link,
 a:visited {
   color: $black;
@@ -28,7 +42,7 @@ a:visited {
 
 a:focus,
 :focus {
-  outline: 1px dotted $black;
+  outline: none;
 }
 
 a:active,
@@ -36,4 +50,20 @@ input:active,
 select:active,
 textarea:active {
   outline: none;
+}
+
+
+.special-0 {
+  background-color: rgba($red, 0.6);
+  color: $white;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.special-1 {
+  color: $green !important;
+}
+
+.special-2 {
+  color: $orange !important;
 }

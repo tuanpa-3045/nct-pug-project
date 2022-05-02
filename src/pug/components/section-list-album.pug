@@ -1,7 +1,8 @@
 mixin listAlbum(title,data)
   h2.list-album__title= title
-  .d-flex.justify-content-between.flex-wrap.w-100
+  .d-flex.flex-wrap
     each item in data
       .list-album__image
-        img(src= `${item.urlImage}`, alt="photo")
+        a(href="#!")
+          img(src= `${item.urlImage}`, alt="photo")
           p.description= item.description

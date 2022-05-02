@@ -1,5 +1,5 @@
 .box-left {
-  width: 70%;
+  width: 66%;
 
   .list-album {
     justify-content: space-between;
@@ -14,7 +14,7 @@
     &__image {
       width: 150px;
       height: 150px;
-      margin-bottom: 65px;
+      margin: 0 10px 65px;
 
       img {
         height: 100%;
@@ -26,5 +26,11 @@
         font-size: $f-size15;
       }
     }
+  }
+  :first-child {
+    margin-left: 0;
+  }
+  :last-child {
+    margin-right:0;
   }
 }

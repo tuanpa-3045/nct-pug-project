@@ -6,12 +6,19 @@ block main
     .container
       .banner
         +carousel(banner)
-      .box-left
-        section.list-album
-          +listAlbum("Trữ tình chọn lọc",listAlbum1)
-        section.list-album
-          +listAlbum("Trữ tình bất hủ",listAlbum2)
-        section.list-album
-          +listAlbum("nghe lại lại yêu",listAlbum3)
-        section.list-album
-          +listAlbum("mới phát hành",listAlbum4)
+      .d-flex.justify-content-between
+        aside.box-left
+          section.list-album
+            +listAlbum("Trữ tình chọn lọc",listAlbum1)
+          section.list-album
+            +listAlbum("Trữ tình bất hủ",listAlbum2)
+          section.list-album
+            +listAlbum("nghe lại lại yêu",listAlbum3)
+          section.list-album
+            +listAlbum("mới phát hành",listAlbum4)
+          section.list-album
+            +listMusic('bài hát',songList)
+        aside.box-right
+           +topSong("Bxh bài hát",vietnam)
+           +topMv("bxh mv",US)
+           +suggestForYou()

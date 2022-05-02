@@ -1,0 +1,23 @@
+mixin listMusic(title,data)
+  h2.box-right-title= title
+    i.fa-solid.fa-angle-right.mx-1
+  .list-music
+    .list-music__item
+      ul.d-flex.flex-wrap
+        each item,index in data
+          li.d-flex.align-items-center.justify-content-between
+            a(href="#!").d-flex.align-items-center
+              .list-music__img
+                img(src= `${item.href}`, alt="photo")
+              div
+                p.title= item.title
+                p.description= item.name
+            div
+              div.show-number-listener
+                i.fa-solid.fa-headphones-simple
+                span 1234
+              div.d-none.action-play
+                i.fa-solid.fa-heart-circle-plus
+                i.fa-solid.fa-play
+
+

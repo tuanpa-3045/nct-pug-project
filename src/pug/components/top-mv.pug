@@ -1,0 +1,26 @@
+mixin topMv(title,data)
+    h2.box-right-title= title
+      i.mx-2.fa-solid.fa-circle-play
+    button.nation.active Việt Nam
+    button.nation Âu Mỹ
+    button.nation Hàn Quốc
+    ul
+      .top-mv
+        each item,index in data
+            li
+              a(href="#!")
+                .list-chart-music.d-flex.align-items-center.justify-content-start
+                  -if (index ===0 )
+                    .first-img
+                      span(class=`special-${index} index`)= item.id
+                      img(src="./assets/images/bxh-mv/01.jpeg", alt="photo")
+                  -else
+                    img(src=`./assets/images/bxh-mv/0${item.id}.jpg`, alt="photo")
+                    span(class=`index special-${index}`)= item.id
+                  .d-flex.flex-column.text-start.ml-3
+                    p.top-mv-description= item.title
+                    p.top-mv-singer= item.singer
+
+
+
+
