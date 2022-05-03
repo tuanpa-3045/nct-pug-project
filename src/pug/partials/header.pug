@@ -4,8 +4,6 @@ mixin header(listLinkNavbar)
       .container
         a.navbar-brand(href='#')
           img(src="./assets/images/logo_nct.png", alt="logo")
-        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
         #navbarNavDropdown.collapse.navbar-collapse
           ul.navbar-nav
             each item in listLinkNavbar
@@ -23,4 +21,6 @@ mixin header(listLinkNavbar)
           img(src="./assets/images/nav-header/ic_upload.png", alt="icon")
         button.btn.btn-light.mx-1(type='button') Đăng nhập
         button.btn.btn-primary(type='button')  Đăng Ký
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
 

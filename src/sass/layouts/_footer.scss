@@ -1,25 +1,41 @@
 .footer {
-  background-color: $gray-light;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 100%;
-  padding-right: var(--bs-gutter-x, .75rem);
-  padding-left: var(--bs-gutter-x, .75rem);
-  margin-right: auto;
-  margin-left: auto;
-  padding-top:1000px;
+  .title {
+    font-size:$f-size17;
+    font-weight: $fw600;
+    text-transform:uppercase;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
 
   &__cooperation {
-
-    .title {
-      font-size:bold;
-      text-transform:uppercase;
-      line-height: 1;
-    }
+    background-color: rgba($p-gray, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem 0;
 
     img {
       height:100%;
       width: auto;
     }
+  }
+  .navigation {
+    width: 33%;
+  }
+  li {
+    margin-right: 0rem;
+    color: rgba($p-gray, 0.5);
+  }
+
+  .text-gray {
+    @include description();
+
+  }
+
+  .copyright {
+    font-size: $f-size13;
+    background-color: rgba($blue, 0.9);
+    padding: 2rem 0;
+    color: $white;
   }
 }

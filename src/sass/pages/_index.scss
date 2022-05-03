@@ -1,0 +1,66 @@
+.main-container {
+
+  @include respond-to(desktop-and-down) {
+    flex-direction: column;
+  }
+  .box-left {
+    @include respond-to(desktop-and-down) {
+      width: 100%;
+    }
+    :last-child {
+      margin-right: 1rem;
+    }
+  }
+  .box-right {
+    @include respond-to(desktop-and-down) {
+      width: 100%;
+    }
+
+    .nation {
+      @include respond-to(largedesktop-and-down) {
+        font-size: $f-size13;
+        padding: 0.5rem;
+      }
+      @include respond-to(largedesktop-and-down) {
+        font-size: $f-size15;
+        padding: 0.5rem;
+      }
+    }
+  }
+  .list-music li {
+    @include respond-to(desktop-and-down) {
+      width: 100%;
+      justify-content:space-between;
+    }
+  }
+
+}
+
+.footer {
+
+  .footer__cooperation {
+    @include respond-to(desktop-and-down) {
+      display:flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .navigation {
+    @include respond-to(desktop-and-down) {
+      width: 100% !important;
+    }
+  }
+  .footer-navigate {
+    @include respond-to(desktop-and-down) {
+      width: 100% !important;
+      flex-direction: column;
+    }
+  }
+  .company {
+    @include respond-to(desktop-and-down) {
+      width: 100% !important;
+      flex-direction: column;
+      align-content: center;
+    }
+  }
+}

@@ -6,7 +6,7 @@ block main
     .container
       .banner
         +carousel(banner)
-      .d-flex.justify-content-between
+      .d-flex.justify-content-between.main-container
         aside.box-left
           section.list-album
             +listAlbum("Trữ tình chọn lọc",listAlbum1)
@@ -17,8 +17,12 @@ block main
           section.list-album
             +listAlbum("mới phát hành",listAlbum4)
           section.list-album
-            +listMusic('bài hát',songList)
+            +listMusic("bài hát",songList)
+          section.list-album
+            +sectionImage("top100",top100,0)
+          section.list-album
+            +sectionImage("weekly artist chart",weeklyArtist,50)
         aside.box-right
-           +topSong("Bxh bài hát",vietnam)
-           +topMv("bxh mv",US)
-           +suggestForYou()
+          +topSong("Bxh bài hát",vietnam)
+          +topMv("bxh mv",US)
+          +suggestForYou()

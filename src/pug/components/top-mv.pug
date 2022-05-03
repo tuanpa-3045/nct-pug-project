@@ -1,9 +1,10 @@
 mixin topMv(title,data)
     h2.box-right-title= title
       i.mx-2.fa-solid.fa-circle-play
-    button.nation.active Việt Nam
-    button.nation Âu Mỹ
-    button.nation Hàn Quốc
+    div.btn-radius
+      button.nation.active Việt Nam
+      button.nation Âu Mỹ
+      button.nation Hàn Quốc
     ul
       .top-mv
         each item,index in data
@@ -18,8 +19,8 @@ mixin topMv(title,data)
                     img(src=`./assets/images/bxh-mv/0${item.id}.jpg`, alt="photo")
                     span(class=`index special-${index}`)= item.id
                   .d-flex.flex-column.text-start.ml-3
-                    p.top-mv-description= item.title
-                    p.top-mv-singer= item.singer
+                    p.top-mv-title= item.title
+                    p.description= item.singer
 
 
 

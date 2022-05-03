@@ -1,0 +1,10 @@
+mixin sectionImage(title,data,borderRadius)
+  h2.box-right-title= title
+    i.fa-solid.fa-angle-right.mx-1
+  .list-image.my-3
+    ul.d-flex
+      each item in data
+        li
+          a(href="#!")
+            img(src= `${item.href}`, alt="photo" class=`w-100 ${borderRadius > 0 && "rounded-circle"}`)
+            p.description.text-center.my-3= item.title

@@ -13,6 +13,7 @@
 
   .nation {
     @include button();
+
   }
   .active {
     background-color: rgba($red, 0.5);;
@@ -43,13 +44,10 @@
       @include index()
     }
 
-    &-description {
+    .description {
       @include description()
     }
 
-    &-singer {
-      @include nameSinger()
-    }
   }
 
 }

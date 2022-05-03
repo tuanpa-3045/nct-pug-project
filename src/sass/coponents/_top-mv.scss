@@ -18,7 +18,5 @@
     color: $white;
   }
 
-  &-singer {
-    @include nameSinger()
-  }
+
 }
