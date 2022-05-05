@@ -1,34 +1,35 @@
 .header {
+  font-size: 13px;
   width: 100%;
   height: auto;
   margin: 0 auto;
   position: fixed;
   top:0;
-  z-index: $z-index1;
+  z-index: $z-sticky;
 
   &__search {
-    margin: 0 30px;
+    margin: 0 $mg-medium;
     position: relative;
+
+
+    input {
+      padding: $pd-small $pd-large;
+      border-radius: 10px;
+    }
 
     .icon {
       opacity: 0.8;
       position: absolute;
-      top: 11px;
-      left: 5px;
+      top: 13px;
+      left: 8px;
       outline: none;
     }
-
-    input {
-      padding: 10px 25px;
-      border-radius: 10px;
-    }
-
   }
 
 
-  &__upgrade-icon {
-    width: 28px;
-    margin-left: 15px;
+  &__upload-icon {
+    width: 2rem;
+    margin-left: $mg-medium;
     cursor: pointer;
 
     img {
@@ -37,7 +38,14 @@
     }
   }
 
-  .btn {
-    font-size: $f-size13;
+  .btn-login {
+
+    @include flex($gap:1rem, $justify:center);
+    margin-left: auto;
+    font-size: $fs-light;
+
+    button {
+      font-size: $fs-light;
+    }
   }
 }

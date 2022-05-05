@@ -1,16 +1,16 @@
 mixin topMv(title,data)
-    h2.box-right-title= title
+    h2.main-title= title
       i.mx-2.fa-solid.fa-circle-play
     div.btn-radius
-      button.nation.active Việt Nam
-      button.nation Âu Mỹ
-      button.nation Hàn Quốc
+      button.button.active Việt Nam
+      button.button Âu Mỹ
+      button.button Hàn Quốc
     ul
       .top-mv
         each item,index in data
             li
               a(href="#!")
-                .list-chart-music.d-flex.align-items-center.justify-content-start
+                .list-chart-music.d-flex.align-items-center
                   -if (index ===0 )
                     .first-img
                       span(class=`special-${index} index`)= item.id

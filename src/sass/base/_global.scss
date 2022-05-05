@@ -1,12 +1,28 @@
 body {
-  font-family: $font-inter !important;
-  font-weight: $fw400;
+  font-family: $ff-inter !important;
+  font-weight: $fw-regular;
   line-height: 1;
   background-color: $gray-light;
 }
 
-.btn {
-  outline: none !important;
+.container-fluid {
+  overflow: hidden;
+  max-width: $site-width;
+  margin: 0 auto;
+}
+
+.banner {
+  margin-top: 75px;
+}
+
+.description {
+  color: rgba($p-gray, 0.6) !important;
+  font-size: small;
+  margin-top: 0.5rem;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none !important;
 }
 
 .bg-gray {
@@ -41,10 +57,19 @@ a {
 }
 
 li {
-  margin-right: 2rem;
   :last-child() {
     margin-right: 0;
   }
+}
+
+li:hover {
+  background-color: rgba($p-gray,0.1);
+  transition: all 0.3s linear;
+}
+
+img:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem rgba($black, 0.3);
+  transition: all 0.3s linear;
 }
 
 a:hover {

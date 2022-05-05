@@ -1,0 +1,41 @@
+.box-right {
+  width: 30%;
+  margin: $mg-large auto;
+  text-align: center;
+
+
+
+  .active {
+    background-color: rgba($red, 0.5);;
+    color: $white;
+  }
+
+  .list-chart-music {
+    min-height: 5rem;
+    border-bottom: 1px solid rgba($p-gray, 0.2);
+    padding:$pd-small 0;
+    position: relative;
+
+    .first-img {
+      height: 8rem;
+
+      .special-0 {
+        position: absolute;
+        bottom: 1rem;
+      }
+
+      img {
+        height:100%;
+      }
+    }
+
+    .index {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: $pd-small;
+    }
+
+  }
+
+}

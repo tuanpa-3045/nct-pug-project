@@ -1,0 +1,6 @@
+mixin hotTopics(title,data)
+  h2.main-title= title
+    i.fa-solid.fa-angle-right.mx-1
+  each item in data
+    a(href="#!")
+      img(src=`${item.href}`, class="my-3" alt="photo")

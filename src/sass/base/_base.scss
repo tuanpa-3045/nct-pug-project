@@ -1,5 +1,9 @@
 :root {
-  font-size: $f-size15 !important;
+  font-size: $fs-base !important;
   background-color: $bg-gray !important;
   font-size: 15px;
+}
+
+.main-container {
+  @include flex();
 }

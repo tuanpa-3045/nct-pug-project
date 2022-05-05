@@ -1,0 +1,36 @@
+.list-music {
+
+  &__item {
+    @include flex($wrap:wrap)
+  }
+
+
+  &__song {
+    @include flex($align:center,$justify:space-between);
+
+    width: 47%;
+    border-top: 1px solid rgba($p-gray, 0.2);
+    padding: $pd-small 0;
+
+    .show-number-listener {
+      color: rgba($p-gray, 0.6);
+
+      i {
+        font-size: 0.8rem;
+        margin-right: $mg-small * 0.5;
+      }
+    }
+  }
+
+  &__img {
+    width: 6rem;
+    padding-right: $pd-small;
+
+    img {
+      width: 100%;
+    }
+  }
+  &____content {
+    background-color: #000;
+  }
+}

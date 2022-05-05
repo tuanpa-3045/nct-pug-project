@@ -1,49 +1,26 @@
 
-@mixin title() {
-  text-transform: uppercase;
-  font-size: $f-size27;
-  font-weight: $fw300;
-  color: $blue;
-  margin-bottom: 10px;
-}
 
-@mixin flex($flex-direction: row,
-  $align-items: center,
-  $justify-content: center,
-  $wrap: wrap,
-  ) {
+@mixin flex($direction: row, $wrap: nowrap, $gap:0, $align: '', $justify: '') {
   display: flex;
-  flex-direction: $flex-direction;
-  align-items: $align-items;
-  justify-content: $justify-content;
+  gap: $gap;
+  flex-direction: $direction;
   flex-wrap: $wrap;
+
+  @if $align !='' {
+    align-items: $align;
+  }
+
+  @if $justify !='' {
+    justify-content: $justify;
+  }
+
 }
 
-@mixin button($border-radius : 0) {
-  width: 33%;
-  margin: 0 -3px;
-  padding: 10px 20px;
-  border: none;
-  background-color: $p-gray;
-}
 
-@mixin index() {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px;
-}
-
-@mixin nameSinger() {
-  margin-top: 0.3rem;
-  font-size: 0.75rem;
-  color: rgba($p-gray, 0.6);
-  padding-top: 5px;
-}
 
 @mixin hoverTransition($color, $backgroundColor: '') {
 
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 
   &:hover {
     color: $color;
@@ -56,8 +33,29 @@
   }
 }
 
-@mixin description {
-    color: rgba($p-gray, 0.6);
-    font-size: small;
-    margin-top:0.5rem;
+
+$breakpoints: (smallphone-and-down: "(max-width: 399px)",
+  phone-and-down: "(max-width: 575px)",
+  tablet-and-down: "(max-width: 767px)",
+  desktop-and-down: "(max-width: 991px)",
+  largedesktop-and-down: "(max-width: 1199px)",
+  extralarge-and-down: "(max-width: 1439px)",
+  smallphone-and-up: "(min-width: 400px)",
+  phone-and-up: "(min-width: 576px)",
+  tablet-and-up: "(min-width: 768px)",
+  desktop-and-up: "(min-width: 992px)",
+  largedesktop-and-up: "(min-width: 1200px)",
+  extralarge-and-up: "(min-width: 1440px)",
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query)=="string", unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
   }
+}

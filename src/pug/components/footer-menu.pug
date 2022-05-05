@@ -3,8 +3,8 @@ mixin footerMenu(title,data)
     h2.title= title
     ul.d-flex.flex-wrap
       each item in data
-        li.w-50.my-3.text-gray
+        li.w-50.my-3
           i.fa-solid.fa-angle-right.mr-3
           span
-            a(href="#!" class="text-gray")
+            a(href="#!" class="description")
               = item.title

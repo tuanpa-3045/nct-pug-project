@@ -1,3 +1,4 @@
+// color
 $yellow: #f5bd10;
 $gray-light: #F5F5F5;
 $p-gray: #636363;
@@ -8,29 +9,44 @@ $blue: #71C5F3;
 $green: green;
 $orange: orange;
 $red: #ff0000;
+
+// size
+$site-width: 1280px;
+
 $transition: all 0.3s linear;
-$site-width: 1140px;
 
-$carousel-transition-duration: 0.3s;
+// padding
+$pd-smaller: 0.5rem;
+$pd-small: 1rem;
+$pd-medium: 2rem;
+$pd-large: 3rem;
 
-$z-index1: 1000;
-$z-index2: 1001;
-$z-index3: 1002;
+// margin
+$mg-small: 1rem;
+$mg-medium: 2rem;
+$mg-large: 3rem;
+
+// z-index
+$z-negative: -1;
+$z-elevate: 1;
+$z-sticky: 100;
+$z-drawer: 200;
+$z-dropdown: 400;
+$z-modal: 500;
+
+// font family
+$ff-inter: 'Inter',sans-serif;
 
 
-$font-inter: 'Inter',sans-serif;
+//font-weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 800;
 
-$fw100: 100;
-$fw200: 200;
-$fw300: 300;
-$fw400: 400;
-$fw500: 500;
-$fw600: 600;
-$fw700: 700;
-$fw800: 800;
-
-$f-size13: 13px;
-$f-size15: 15px;
-$f-size17: 17px;
-$f-size21: 21px;
-$f-size27: 27px;
+//font-size
+$fs-light: 13px;
+$fs-base: 15px;
+$fs-sizable: 17px;
+$fs-large: 27px;

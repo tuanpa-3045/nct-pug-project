@@ -1,41 +1,37 @@
 .footer {
   .title {
-    font-size:$f-size17;
-    font-weight: $fw600;
+    font-size:$fs-sizable;
+    font-weight: $fw-semibold;
     text-transform:uppercase;
-    margin-bottom: 1rem;
+    margin: $mg-small 0;
     line-height: 1;
   }
 
   &__cooperation {
     background-color: rgba($p-gray, 0.1);
     width: 100%;
-    margin: 0 auto;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: $pd-small 0;
 
     img {
       height:100%;
-      width: auto;
+      width: 20%;
     }
   }
   .navigation {
     width: 33%;
   }
   li {
-    margin-right: 0rem;
+    background-color: transparent;
+    margin-right: 0;
     color: rgba($p-gray, 0.5);
-  }
-
-  .text-gray {
-    @include description();
 
   }
 
   .copyright {
-    font-size: $f-size13;
+    font-size: $fs-light;
     background-color: rgba($blue, 0.9);
-    padding: 2rem 0;
+    padding: 2rem;
     color: $white;
   }
 }

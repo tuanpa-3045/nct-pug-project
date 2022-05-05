@@ -1,0 +1,32 @@
+.box-right {
+  .title {
+    margin: $mg-small 0;
+  }
+
+  &-suggest {
+    margin-top: $mg-medium;
+    margin-bottom: $mg-large;
+    background-image: url("https://stc-id.nixcdn.com/v11/images/bg_web.png");
+    height: 15rem;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+
+    .btn-listen {
+      padding: $pd-small $pd-medium;
+      border: none;
+      border-radius: 2rem;
+      color: $blue;
+      margin-top: $mg-small;
+      background-color: $white;
+
+      i {
+        padding-right: $pd-smaller;
+      }
+
+      &:hover {
+        @include hoverTransition($p-gray, $backgroundColor: rgba($white, 0.6))
+      }
+    }
+
+  }
+}
