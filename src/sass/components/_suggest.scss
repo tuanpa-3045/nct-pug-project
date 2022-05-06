@@ -4,12 +4,14 @@
   }
 
   &-suggest {
+
+    @include flex($align:center,$direction:column,$justify:center);
+
     margin-top: $mg-medium;
     margin-bottom: $mg-large;
     background-image: url("https://stc-id.nixcdn.com/v11/images/bg_web.png");
     height: 15rem;
     background-repeat: no-repeat;
-    border-radius: 0.5rem;
 
     .btn-listen {
       padding: $pd-small $pd-medium;

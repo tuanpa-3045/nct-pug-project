@@ -12,13 +12,13 @@ body {
 }
 
 .banner {
-  margin-top: 75px;
+  margin-top: $mg-large*1.5;
 }
 
 .description {
   color: rgba($p-gray, 0.6) !important;
   font-size: small;
-  margin-top: 0.5rem;
+  margin: $mg-small 0;
 }
 
 .navbar-toggler:focus{

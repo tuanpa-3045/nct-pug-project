@@ -1,5 +1,5 @@
 .header {
-  font-size: 13px;
+  font-size: $fs-light;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -20,8 +20,8 @@
     .icon {
       opacity: 0.8;
       position: absolute;
-      top: 13px;
-      left: 8px;
+      top: 18px;
+      left: 10px;
       outline: none;
     }
   }

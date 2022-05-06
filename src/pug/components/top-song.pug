@@ -8,14 +8,14 @@ mixin topSong(title,data)
       each item,index in data
           li
             a(href="#!")
-              .list-chart-music.d-flex.align-items-center.justify-content-start
+              .list-chart-music
                 -if (index ===0 )
                   .first-img
                     div(class=`special-${index} index`)= item.id
                     img(src="./assets/images/top-album/top1.jpeg", alt="photo")
                 -else
                   div(class=`special-${index} index`)= item.id
-                .d-flex.flex-column.text-start.ml-3
+                .text-start.ml-3
                   p.box-right-tiltle= item.title
                   p.description= item.singer
 

@@ -9,8 +9,10 @@
     background-color: rgba($red, 0.5);;
     color: $white;
   }
-
+  
   .list-chart-music {
+    @include flex($align:center);
+
     min-height: 5rem;
     border-bottom: 1px solid rgba($p-gray, 0.2);
     padding:$pd-small 0;

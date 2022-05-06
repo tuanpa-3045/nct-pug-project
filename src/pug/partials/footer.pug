@@ -1,56 +1,53 @@
 mixin footer(cooperationData)
   footer.footer
     .footer__cooperation
-      div.container-fluid
+      .container-fluid
         p.title.text-start Liên kết và hợp tác
-        div.d-flex.align-items-center.partner.my-3
+        .partner.my-3
           each item in cooperationData
             img(src=`${item.imgBackgroundUrl}`, alt="photo")
-    div.container-fluid
-      div.d-flex.border-bottom.footer-navigate
+    .container-fluid
+      .footer-navigate
         +footerMenu("hỗ trợ",support)
         +footerMenu("sản phẩm khác",anotherProduct)
         aside.connect-for-you.my-5
           p.title top từ khóa
-          div.mb-5
+          .mb-5
             a(href="#!" class="fw-lighter") Don't Break My Heart,
             a(href="#!" class="fw-lighter") Ngày Đầu Tiên,
             a(href="#!" class="fw-lighter") See Tình,
             a(href="#!" class="fw-lighter") Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh,
             a(href="#!" class="fw-lighter") Light Switch
-          p.title.my-3 kết nối với chúng tôi
-          div.my-3
+          p.title kết nối với chúng tôi
+          .my-3
             each item in socialNetwork
               a(href="#!")
                 img(src=`${item.href}` style="height:2.5rem;" class="mr-3" alt="photo")
           img(src="https://stc-id.nixcdn.com/v11/images/footer/t_google_play.png", style="height:2rem;" alt="photo")
           img(src="https://stc-id.nixcdn.com/v11/images/footer/t_google_play.png", style="height:2rem;" class="mx-3" alt="photo")
           img(src="https://stc-id.nixcdn.com/v11/images/footer/t_appgallery.png", style="height:2rem;" alt="photo")
-    div.container-fluid.d-flex.align-items-center.py-5.company
-      img(src="https://stc-id.nixcdn.com/v11/images/footer/t_logo_company.png", style="height:4rem;" alt="photo")
-      div.mx-4
-        h3.title CÔNG TY CỔ PHẦN N C T
-        div
-          li Chủ sở hữu website:
-            strong
-              |  Ông Nhan Thế Luân
-          li.my-3 Giấy phép MXH số 499/GP-BTTTT do Bộ Thông Tin và Truyền thông cấp ngày 28/09/2015.f
-          li Giấy Chứng nhận Đăng ký Kinh doanh số 0305535715 do Sở kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp ngày 01/03/2008.
-      img(src="https://stc-id.nixcdn.com/v11/images/footer/t_bo_cong_thuong.png", style="height:3.5rem;" class="mr-3 my-3" alt="photo")
-      img(src="https://stc-id.nixcdn.com/v11/images/footer/t_dmca.png", style="height:3.5rem;" alt="photo")
+      .footer-about-company
+        img(src="https://stc-id.nixcdn.com/v11/images/footer/t_logo_company.png", style="height:4rem;" alt="photo")
+        .mx-4
+          h3.title CÔNG TY CỔ PHẦN N C T
+          div
+            li Chủ sở hữu website:
+              strong
+                |  Ông Nhan Thế Luân
+            li.my-3 Giấy phép MXH số 499/GP-BTTTT do Bộ Thông Tin và Truyền thông cấp ngày 28/09/2015.f
+            li Giấy Chứng nhận Đăng ký Kinh doanh số 0305535715 do Sở kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp ngày 01/03/2008.
+        img(src="https://stc-id.nixcdn.com/v11/images/footer/t_bo_cong_thuong.png", style="height:3.5rem;" class="mr-3 my-3" alt="photo")
+        img(src="https://stc-id.nixcdn.com/v11/images/footer/t_dmca.png", style="height:3.5rem;" alt="photo")
     .copyright
-      .container-fluid.d-flex.flex-row.align-items-center.copyright__content
-        div
-          div.d-flex.flex-row.align-items-center
-            i.fa-solid.fa-location-dot.mr-3.d-block
-            | Tầng 19, Tòa nhà The 678 Tower, Số 67 đường Hoàng Văn Thái, phường Tân Phú, quận 7, TP HCM.
-        div.d-flex.mx-5.my-3
-          p.description
-          div.mx-1
-            i.fa-solid.fa-envelope
+      .container-fluid.copyright__content
+        .d-flex.flex-row.align-items-center
+          i.fa-solid.fa-location-dot.mr-3.d-block
+          | Tầng 19, Tòa nhà The 678 Tower, Số 67 đường Hoàng Văn Thái, phường Tân Phú, quận 7, TP HCM.
+        .d-flex.align-items-center.m-5
+          .mx-1
+              i.fa-solid.fa-envelope
           p.mx-1 asddfsdf@gmail.com
-          div.mx-2
-            i.fa-solid.fa-phone.mx-1
-          p 088.456.789
-        div
-          p &copy; NCT Corp. All rights reserved
+            .mx-2
+              i.fa-solid.fa-phone.mx-1
+            p 088.456.789
+        p &copy; NCT Corp. All rights reserved

@@ -70,17 +70,16 @@
 
 .footer {
 
-  .footer__cooperation {
 
-    .partner {
+  .partner {
 
-      @include respond-to(desktop-and-down) {
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    @include respond-to(desktop-and-down) {
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
+
 
   .navigation {
     @include respond-to(desktop-and-down) {
@@ -93,10 +92,10 @@
       flex-direction: column;
     }
   }
-  .company {
+  &-about-company {
     @include respond-to(desktop-and-down) {
       width: 100% !important;
-      flex-direction: column;
+      flex-direction: column !important;
       align-content: center;
     }
   }

@@ -5,12 +5,11 @@ mixin topMv(title,data)
       button.button.active Việt Nam
       button.button Âu Mỹ
       button.button Hàn Quốc
-    ul
-      .top-mv
+    ul.top-mv
         each item,index in data
             li
               a(href="#!")
-                .list-chart-music.d-flex.align-items-center
+                .list-chart-music
                   -if (index ===0 )
                     .first-img
                       span(class=`special-${index} index`)= item.id
@@ -18,7 +17,7 @@ mixin topMv(title,data)
                   -else
                     img(src=`./assets/images/bxh-mv/0${item.id}.jpg`, alt="photo")
                     span(class=`index special-${index}`)= item.id
-                  .d-flex.flex-column.text-start.ml-3
+                  .text-start.ml-3
                     p.top-mv-title= item.title
                     p.description= item.singer
 

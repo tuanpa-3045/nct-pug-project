@@ -1,4 +1,6 @@
 .footer {
+
+
   .title {
     font-size:$fs-sizable;
     font-weight: $fw-semibold;
@@ -17,10 +19,28 @@
       height:100%;
       width: 20%;
     }
+
+    .partner {
+      @include flex($align:center);
+    }
+
   }
+
+  &-navigate {
+    @include flex();
+    border-bottom: 1px solid rgba($p-gray, 0.2);
+  }
+
+  &-about-company {
+    @include flex($align:center,$direction:row);
+    margin: $mg-large 0;
+  }
+
   .navigation {
     width: 33%;
+
   }
+
   li {
     background-color: transparent;
     margin-right: 0;
@@ -33,5 +53,9 @@
     background-color: rgba($blue, 0.9);
     padding: 2rem;
     color: $white;
+
+    &__content {
+      @include flex($align:center);
+    }
   }
 }

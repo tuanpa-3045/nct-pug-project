@@ -69,13 +69,13 @@ body {
 }
 
 .banner {
-  margin-top: 75px;
+  margin-top: 4.5rem;
 }
 
 .description {
   color: rgba(99, 99, 99, 0.6) !important;
   font-size: small;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
 }
 
 .navbar-toggler:focus {
@@ -239,7 +239,7 @@ textarea:active {
 }
 
 @media (max-width: 991px) {
-  .footer .footer__cooperation .partner {
+  .footer .partner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -257,9 +257,9 @@ textarea:active {
   }
 }
 @media (max-width: 991px) {
-  .footer .company {
+  .footer-about-company {
     width: 100% !important;
-    flex-direction: column;
+    flex-direction: column !important;
     align-content: center;
   }
 }
@@ -290,8 +290,8 @@ textarea:active {
 .header__search .icon {
   opacity: 0.8;
   position: absolute;
-  top: 13px;
-  left: 8px;
+  top: 18px;
+  left: 10px;
   outline: none;
 }
 .header__upload-icon {
@@ -352,7 +352,7 @@ textarea:active {
   margin-right: 1rem;
 }
 .box-left .list-album li:hover {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .box-left :first-child {
   margin-left: 0px;
@@ -371,6 +371,11 @@ textarea:active {
   color: #fff;
 }
 .box-right .list-chart-music {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   min-height: 5rem;
   border-bottom: 1px solid rgba(99, 99, 99, 0.2);
   padding: 1rem 0;
@@ -394,7 +399,6 @@ textarea:active {
 }
 
 .top-mv .first-img {
-  text-align: center;
   position: relative;
 }
 .top-mv .first-img img {
@@ -413,12 +417,17 @@ textarea:active {
   margin: 1rem 0;
 }
 .box-right-suggest {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
   background-image: url("https://stc-id.nixcdn.com/v11/images/bg_web.png");
   height: 15rem;
   background-repeat: no-repeat;
-  border-radius: 0.5rem;
 }
 .box-right-suggest .btn-listen {
   padding: 1rem 2rem;
@@ -465,6 +474,13 @@ textarea:active {
   font-size: 0.8rem;
   margin-right: 0.5rem;
 }
+.list-music li:hover {
+  background-color: rgba(99, 99, 99, 0.1) !important;
+  cursor: pointer;
+}
+.list-music li:hover > a {
+  color: #71C5F3;
+}
 .list-music__img {
   width: 6rem;
   padding-right: 1rem;
@@ -493,6 +509,28 @@ textarea:active {
   height: 100%;
   width: 20%;
 }
+.footer__cooperation .partner {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.footer-navigate {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+}
+.footer-about-company {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 3rem 0;
+}
 .footer .navigation {
   width: 33%;
 }
@@ -506,4 +544,11 @@ textarea:active {
   background-color: rgba(113, 197, 243, 0.9);
   padding: 2rem;
   color: #fff;
+}
+.footer .copyright__content {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
