@@ -1,5 +1,4 @@
 .header {
-
   &__upload-icon {
     @include respond-to(desktop-and-down) {
       display: none;
@@ -8,104 +7,102 @@
 
   input {
     @include respond-to(desktop-and-down) {
-     width: 100%;
-     text-align: center;
-    }
-  }
-
-  .btn-login {
-
-    @include respond-to(desktop-and-down) {
-      margin-top: $mg-small;
-    }
-  }
-}
-
-
-.main-container {
-
-  @include respond-to(desktop-and-down) {
-    flex-direction: column;
-  }
-  .box-left {
-    @include respond-to(desktop-and-down) {
       width: 100%;
-      margin-bottom: 0;
-      :last-child {
-        margin-right: 0;
+      text-align: center;
+    }
+
+    .btn-login {
+      @include respond-to(desktop-and-down) {
+        margin-top: $mg-small;
       }
     }
   }
-  .box-right {
+
+  .main-container {
     @include respond-to(desktop-and-down) {
-      width: 100%;
-      margin-top: 0;
-    }
-
-    .nation {
-      @include respond-to(largedesktop-and-down) {
-        font-size: $fs-light;
-        padding: $pd-smaller;
-      }
-      @include respond-to(largedesktop-and-down) {
-        font-size: $fs-base;
-        padding: $pd-smaller;
-      }
-    }
-  }
-  .list-music li {
-    @include respond-to(desktop-and-down) {
-      width: 100%;
-      margin-right: 0 !important;
-    }
-  }
-
-  .description {
-    @include respond-to(desktop-and-down) {
-      font-size: $fs-base;
-    }
-  }
-
-}
-
-.footer {
-
-
-  .partner {
-
-    @include respond-to(desktop-and-down) {
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-
-  .navigation {
-    @include respond-to(desktop-and-down) {
-      width: 100% !important;
-    }
-  }
-  .footer-navigate {
-    @include respond-to(desktop-and-down) {
-      width: 100% !important;
       flex-direction: column;
     }
-  }
-  &-about-company {
-    @include respond-to(desktop-and-down) {
-      width: 100% !important;
-      flex-direction: column !important;
-      align-content: center;
+
+    .box-left {
+      @include respond-to(desktop-and-down) {
+        width: 100%;
+        margin-bottom: 0;
+
+        :last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .box-right {
+      @include respond-to(desktop-and-down) {
+        width: 100%;
+        margin-top: 0;
+      }
+
+      .nation {
+        @include respond-to(largedesktop-and-down) {
+          font-size: $fs-light;
+          padding: $pd-smaller;
+        }
+
+        @include respond-to(largedesktop-and-down) {
+          font-size: $fs-base;
+          padding: $pd-smaller;
+        }
+      }
+    }
+
+    .list-music li {
+      @include respond-to(desktop-and-down) {
+        width: 100%;
+        margin-right: 0 !important;
+      }
+    }
+
+    .description {
+      @include respond-to(desktop-and-down) {
+        font-size: $fs-base;
+      }
     }
   }
 
-  .copyright {
-
-    &__content {
+  .footer {
+    .partner {
       @include respond-to(desktop-and-down) {
-        flex-direction: column !important;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+      }
+    }
+
+    .navigation {
+      @include respond-to(desktop-and-down) {
+        width: 100% !important;
+      }
+    }
+
+    .footer-navigate {
+      @include respond-to(desktop-and-down) {
+        width: 100% !important;
+        flex-direction: column;
+      }
+    }
+
+    &-about-company {
+      @include respond-to(desktop-and-down) {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-content: center;
+      }
+    }
+
+    .copyright {
+      &__content {
+        @include respond-to(desktop-and-down) {
+          flex-direction: column !important;
+          justify-content: center;
+        }
       }
     }
   }

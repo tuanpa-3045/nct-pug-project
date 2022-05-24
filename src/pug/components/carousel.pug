@@ -1,12 +1,23 @@
-mixin carousel(data)
-  #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+mixin carousel({ data, id })
+  .carousel.slide(id=id data-bs-ride='carousel')
     .carousel-inner
       each item,index in data
-        div(class=`carousel-item data-bs-interval=1000 ${index === 0 ? "active" : ""}`)
+        +ratio({ ratio: 16/9, className: `carousel-item data-bs-interval=1000 ${index === 0 ? "active" : ""}` })
           img.d-block.w-100(src= `${item.urlImage}` alt='photo')
-    button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+    button.carousel-control-prev(type='button' data-bs-target=`#${id}` data-bs-slide='prev')
       span.carousel-control-prev-icon(aria-hidden='true')
       span.visually-hidden Previous
-    button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+    button.carousel-control-next(type='button' data-bs-target=`#${id}` data-bs-slide='next')
       span.carousel-control-next-icon(aria-hidden='true')
       span.visually-hidden Next
+
+mixin ratio({ ratio = 1/1, className })
+  div(class=className style=`--aspect-ratio: ${ratio}`)
+    block
+
+//- mixin === Component
+//- button
+//- input
+//- form
+//- layout: header footer ...
+//- tabs, dropdown, table,...

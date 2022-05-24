@@ -189,82 +189,80 @@ textarea:active {
   }
 }
 @media (max-width: 991px) {
-  .header .btn-login {
+  .header input .btn-login {
     margin-top: 1rem;
   }
 }
-
 @media (max-width: 991px) {
-  .main-container {
+  .header .main-container {
     flex-direction: column;
   }
 }
 @media (max-width: 991px) {
-  .main-container .box-left {
+  .header .main-container .box-left {
     width: 100%;
     margin-bottom: 0;
   }
-  .main-container .box-left :last-child {
+  .header .main-container .box-left :last-child {
     margin-right: 0;
   }
 }
 @media (max-width: 991px) {
-  .main-container .box-right {
+  .header .main-container .box-right {
     width: 100%;
     margin-top: 0;
   }
 }
 @media (max-width: 1199px) {
-  .main-container .box-right .nation {
+  .header .main-container .box-right .nation {
     font-size: 13px;
     padding: 0.5rem;
   }
 }
 @media (max-width: 1199px) {
-  .main-container .box-right .nation {
+  .header .main-container .box-right .nation {
     font-size: 15px;
     padding: 0.5rem;
   }
 }
 @media (max-width: 991px) {
-  .main-container .list-music li {
+  .header .main-container .list-music li {
     width: 100%;
     margin-right: 0 !important;
   }
 }
 @media (max-width: 991px) {
-  .main-container .description {
+  .header .main-container .description {
     font-size: 15px;
   }
 }
-
 @media (max-width: 991px) {
-  .footer .partner {
+  .header .footer .partner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 @media (max-width: 991px) {
-  .footer .navigation {
+  .header .footer .navigation {
     width: 100% !important;
   }
 }
 @media (max-width: 991px) {
-  .footer .footer-navigate {
+  .header .footer .footer-navigate {
     width: 100% !important;
     flex-direction: column;
   }
 }
 @media (max-width: 991px) {
-  .footer-about-company {
+  .header .footer-about-company {
     width: 100% !important;
     flex-direction: column !important;
     align-content: center;
   }
 }
 @media (max-width: 991px) {
-  .footer .copyright__content {
+  .header .footer .copyright__content {
     flex-direction: column !important;
     justify-content: center;
   }
@@ -332,6 +330,32 @@ textarea:active {
   background-color: #636363;
 }
 
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
 .box-left {
   margin: 3rem 0;
   width: 66%;
